@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SSTV Playground</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><p class="eyebrow">A little experiment in sound</p><h1>SSTV Playground</h1><p>Send pictures through the air. No internet needed.</p><p class="meta">ROBOT 36 · 320 × 240 · 37 seconds</p></header>
+<main>
+<section><h2>01 / Transmit</h2><canvas id="source" width="320" height="240" aria-label="Image to transmit"></canvas><label class="file">Choose image<input id="image" type="file" accept="image/*"></label><div class="actions"><button id="play">Play sound</button><button id="save" class="secondary">Save WAV</button></div><audio id="player" controls></audio><p id="tx" role="status">A test card is ready to send.</p></section>
+<section><h2>02 / Receive</h2><canvas id="received" width="320" height="240" aria-label="Received image"></canvas><progress id="progress" max="240" value="0"></progress><div class="actions"><button id="listen">Listen</button><button id="stop" class="secondary" disabled>Stop</button></div><label class="file">Open audio<input id="audio" type="file" accept="audio/*,.wav"></label><div class="actions"><button id="loop" class="secondary">Test locally</button><button id="download" class="secondary" disabled>Save PNG</button></div><p id="rx" role="status">Listen before playing the sound on another device.</p></section>
+</main><footer>Images and audio stay on your device. Start at low speaker volume.</footer><script type="module" src="app.js"></script></body></html>
